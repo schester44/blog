@@ -3,26 +3,13 @@ module.exports = {
     title: `freshcut`,
     author: `Steve Chester`,
     description: `Random dev & life related things`,
-    siteUrl: `https://freshcut.netlify.com/`,
+    siteUrl: `https://freshcut.xyz/`,
     social: {
       twitter: `schester44`,
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
+  
     {
       resolve: `gatsby-transformer-remark`,
       options: {
