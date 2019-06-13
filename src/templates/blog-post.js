@@ -5,29 +5,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
-const BlogPostTemplate = ({
-  location,
-  pageContext: { previous, next },
-  data: { markdownRemark, site },
-}) => {
+const BlogPostTemplate = ({ location, pageContext: { previous, next }, data: { markdownRemark, site } }) => {
   const post = markdownRemark
   const siteTitle = site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+      <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 
-      <h1>{post.frontmatter.title}</h1>
+      <h1 style={{ color: `tomato`, marginTop: rhythm(2), fontFamily: "Lateef" }}>{post.frontmatter.title}</h1>
 
       <p
         style={{
           ...scale(-1 / 5),
           display: `block`,
           marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
+          marginTop: rhythm(-0.5)
         }}
       >
         {post.frontmatter.date}
@@ -35,7 +28,7 @@ const BlogPostTemplate = ({
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{
-          marginBottom: rhythm(1),
+          marginBottom: rhythm(1)
         }}
       />
 
@@ -45,7 +38,7 @@ const BlogPostTemplate = ({
           flexWrap: `wrap`,
           justifyContent: `space-between`,
           listStyle: `none`,
-          padding: 0,
+          padding: 0
         }}
       >
         <li>

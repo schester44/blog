@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import "./layout.css"
 
 class Layout extends React.Component {
   render() {
@@ -13,16 +14,16 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
             marginBottom: rhythm(1.5),
-            marginTop: 0,
+            marginTop: 0
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
-              textDecoration: `none`,
+              borderBottom: `none`,
               color: `inherit`,
+              color: `#000`
             }}
             to={`/`}
           >
@@ -32,17 +33,13 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <h3>
           <Link
             style={{
               boxShadow: `none`,
-              textDecoration: `none`,
+              borderBottom: `none`,
               color: `inherit`,
+              color: `#000`
             }}
             to={`/`}
           >
@@ -57,7 +54,7 @@ class Layout extends React.Component {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
         <header>{header}</header>
