@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import { rhythm, scale } from "../utils/typography"
+import { FaGithub, FaTwitter } from "react-icons/fa"
+import { rhythm } from "../utils/typography"
 import "./layout.css"
 
 class Layout extends React.Component {
@@ -12,12 +12,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            marginBottom: rhythm(1.5),
-            marginTop: 0
-          }}
-        >
+        <h1 style={{ margin: 0, paddingBottom: 3, lineHeight: 1 }}>
           <Link
             style={{
               boxShadow: `none`,
@@ -33,7 +28,7 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3>
+        <h3 style={{ margin: 0, marginTop: 27, lineHeight: 1 }}>
           <Link
             style={{
               boxShadow: `none`,
@@ -57,7 +52,19 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
-        <header>{header}</header>
+        <header style={{ marginBottom: rhythm(1.5) }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            {header}
+            <div>
+              <Link style={{ marginRight: 14, border: "none" }} to="https://twitter.com/schester44">
+                <FaTwitter />
+              </Link>
+              <Link style={{ border: "none" }} to="https://github.com/schester44">
+                <FaGithub />
+              </Link>
+            </div>
+          </div>
+        </header>
         <main>{children}</main>
       </div>
     )

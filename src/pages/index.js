@@ -15,6 +15,7 @@ const BlogIndex = ({ location, data: { site, allMarkdownRemark } }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <div key={node.fields.slug}>
+            <p style={{ margin: 0, padding: 0, lineHeight: 1 }}>{node.frontmatter.date}</p>
             <h3
               style={{
                 fontWeight: 400,
@@ -22,7 +23,7 @@ const BlogIndex = ({ location, data: { site, allMarkdownRemark } }) => {
                 marginBottom: rhythm(1 / 4)
               }}
             >
-              <Link style={{ boxShadow: `none`, boxShadow: `none`, color: `tomato` }} to={node.fields.slug}>
+              <Link style={{ boxShadow: `none`, color: `black` }} to={node.fields.slug}>
                 {title}
               </Link>
             </h3>

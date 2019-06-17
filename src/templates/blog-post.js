@@ -13,18 +13,12 @@ const BlogPostTemplate = ({ location, pageContext: { previous, next }, data: { m
     <Layout location={location} title={siteTitle}>
       <SEO title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 
-      <h1 style={{ color: `tomato`, marginTop: rhythm(2), fontFamily: "Lateef" }}>{post.frontmatter.title}</h1>
+      <p style={{ margin: 0, marginBottom: 5, padding: 0, lineHeight: 1 }}>{post.frontmatter.date}</p>
 
-      <p
-        style={{
-          ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-0.5)
-        }}
-      >
-        {post.frontmatter.date}
-      </p>
+      <h1 style={{ lineHeight: 1, color: `black`, fontSize: rhythm(0.75), fontWeight: 400 }}>
+        {post.frontmatter.title}
+      </h1>
+
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       <hr
         style={{

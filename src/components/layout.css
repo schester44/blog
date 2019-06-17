@@ -1,9 +1,17 @@
 body {
-  background-color: #F1F3F4;
+  background-color: #fafafa;
 }
 
-a {
+a,
+a:active,
+a:visited {
   padding-bottom: 3px;
   text-decoration: none;
-  border-bottom: 2px solid #D6E0F3;
+  border-bottom: 2px solid #d6e0f3;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  border-bottom: 2px solid tomato;
 }
